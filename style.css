@@ -1,0 +1,9 @@
+body {     font-family: Arial;     margin: 40px; }  
+h1 {     margin-bottom: 5px; }  
+h2 {     margin-top: 5px; }  
+.login {     margin-left: 30px; }  
+.login h4 {     margin-bottom: 5px; }  
+.login p {     margin-top: 0; }  
+button {     padding: 8px 15px;     margin-bottom: 20px; }  
+.registration {     margin-left: 30px; }  
+footer {     margin-top: 20px;     font-size: 13px; } 
