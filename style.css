@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+#homePage {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background: url("images/Pics1.png") center/cover;
+    z-index: -1;
+}
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+    background: rgba(4,69,43,.96);
+    border-bottom: 3px solid #d8c86b;
+    color: white;
+}
+
+.school-logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.school-logo img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.school-info h1 {
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.school-info p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+main {
+    height: calc(100vh - 75px);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar button {
+    width: 300px;
+    height: 64px;
+    border: 0;
+    border-radius: 11px;
+    background: rgba(3,75,48,.96);
+    color: white;
+    padding: 0 18px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0,0,0,.25);
+}
+
+.sidebar button:hover {
+    background: #096d49;
+    transform: translateX(7px);
+}
+
+.sidebar span {
+    float: right;
+    font-size: 25px;
+}
+
+.welcome-section {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    text-align: center;
+}
+
+.main-logo {
+    width: 410px;
+    height: 410px;
+    margin: auto;
+}
+
+.main-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.welcome-section h2 {
+    font-size: 30px;
+    color: #064c35;
+}
+
+.welcome-section h1 {
+    font-size: 76px;
+    color: #075936;
+}
+
+.welcome-section h1 span {
+    color: #e9bf12;
+}
+
+.welcome-section p {
+    display: inline-block;
+    margin-top: 17px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: rgba(4,82,52,.9);
+    color: white;
+    font-size: 17px;
+}
+
+.login-page {
+    min-height: 100vh;
+    background: #e8eee9;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page.active {
+    display: flex;
+}
+
+.login-box {
+    width: 390px;
+    max-height: 95vh;
+    overflow-y: auto;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(0,0,0,.22);
+}
+
+.register-box {
+    width: 420px;
+}
+
+.login-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.login-box h1 {
+    color: #075936;
+    margin-bottom: 5px;
+}
+
+.login-box h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.login-box input,
+.login-box select {
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: white;
+}
+
+.login-btn {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 6px;
+    background: #075936;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0a8a57;
+}
+
+.register-text {
+    margin-top: 17px;
+    font-size: 14px;
+}
+
+.register-text button,
+.back-btn {
+    border: 0;
+    background: none;
+    color: #075936;
+    cursor: pointer;
+}
+
+.back-btn {
+    margin-top: 20px;
+    color: #555;
+}
+
+
+/* ==================================================
+   TASK 6 - DATA INPUT VALIDATION
+   ================================================== */
+
+.login-box input.invalid,
+.login-box select.invalid {
+    border: 2px solid #d93025;
+    background: #fff7f7;
+}
+
+.login-box input.valid,
+.login-box select.valid {
+    border: 2px solid #16863c;
+    background: #f7fff9;
+}
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #d93025;
+    font-size: 12px;
+}
+
+.form-success {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #16863c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   TASK 7 - DATA STORAGE AND RECORD MANAGEMENT
+   ================================================== */
+
+.records-box {
+    width: 95%;
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 22px rgba(0,0,0,.22);
+    overflow-x: auto;
+}
+
+.records-box h2 {
+    color: #075936;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#studentTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#studentTable th,
+#studentTable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#studentTable th {
+    background: #075936;
+    color: white;
+}
+
+#studentTable tr:nth-child(even) {
+    background: #f3f6f4;
+}
+
+.delete-btn {
+    border: 0;
+    padding: 7px 12px;
+    border-radius: 5px;
+    background: #c62828;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #a51f1f;
+}
+
+
+@media (max-width: 900px) {
+
+    .sidebar button {
+        width: 250px;
+    }
+
+    .welcome-section {
+        left: 60%;
+        width: 600px;
+    }
+
+    .main-logo {
+        width: 320px;
+        height: 320px;
+    }
+
+    .welcome-section h1 {
+        font-size: 60px;
+    }
+}

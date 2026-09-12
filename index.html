@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="page active">
+
+    <div class="background"></div>
+
+    <header>
+        <div class="school-logo">
+            <img src="images/Pics2.png" alt="School Logo">
+        </div>
+
+        <div class="school-info">
+            <h1>HOLY TRINITY COLLEGE OF GENERAL SANTOS CITY</h1>
+            <p>General Santos City, Philippines</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+
+            <button id="departmentButton">
+                DEPARTMENT / OFFICE <span>›</span>
+            </button>
+
+            <button id="studentButton">
+                STUDENT <span>›</span>
+            </button>
+
+            <button id="adminButton">
+                ADMINISTRATOR <span>›</span>
+            </button>
+
+        </div>
+
+        <div class="welcome-section">
+
+            <h2>Welcome to</h2>
+
+            <h1>Clear<span>Sync</span></h1>
+
+            <p>A Web-Based Student Clearance Management System</p>
+
+        </div>
+    </main>
+
+</div>
+
+
+<!-- DEPARTMENT / OFFICE LOGIN -->
+<div id="departmentPage" class="page login-page">
+
+    <div class="login-box">
+
+        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
+
+        <h1>ClearSync</h1>
+        <h2>Department / Office Login</h2>
+
+        <form id="departmentForm" novalidate>
+
+            <input type="text"
+                   id="departmentId"
+                   placeholder="Department / Office ID"
+                   required
+                   minlength="3"
+                   maxlength="30">
+
+            <small class="error-message" id="departmentIdError"></small>
+
+            <input type="password"
+                   id="departmentPassword"
+                   placeholder="Password"
+                   required
+                   minlength="8"
+                   maxlength="50">
+
+            <small class="error-message" id="departmentPasswordError"></small>
+
+            <button type="submit" class="login-btn">
+                LOGIN
+            </button>
+
+            <div class="form-success" id="departmentSuccess"></div>
+
+        </form>
+
+        <button class="back-btn" id="departmentBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- STUDENT LOGIN -->
+<div id="studentPage" class="page login-page">
+
+    <div class="login-box">
+
+        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
+
+        <h1>ClearSync</h1>
+        <h2>Student Login</h2>
+
+        <form id="studentForm" novalidate>
+
+            <input type="text"
+                   id="studentLoginId"
+                   placeholder="Student ID"
+                   required
+                   minlength="3"
+                   maxlength="30">
+
+            <small class="error-message" id="studentLoginIdError"></small>
+
+            <input type="password"
+                   id="studentLoginPassword"
+                   placeholder="Password"
+                   required
+                   minlength="8"
+                   maxlength="50">
+
+            <small class="error-message" id="studentLoginPasswordError"></small>
+
+            <button type="submit" class="login-btn">
+                LOGIN
+            </button>
+
+            <div class="form-success" id="studentSuccess"></div>
+
+        </form>
+
+        <div class="register-text">
+            Don't have an account?
+            <button type="button" id="registerButton">Register</button>
+        </div>
+
+        <button class="back-btn" id="studentBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ADMINISTRATOR LOGIN -->
+<div id="adminPage" class="page login-page">
+
+    <div class="login-box">
+
+        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
+
+        <h1>ClearSync</h1>
+        <h2>Administrator Login</h2>
+
+        <form id="adminForm" novalidate>
+
+            <input type="text"
+                   id="adminId"
+                   placeholder="Administrator ID"
+                   required
+                   minlength="3"
+                   maxlength="30">
+
+            <small class="error-message" id="adminIdError"></small>
+
+            <input type="password"
+                   id="adminPassword"
+                   placeholder="Password"
+                   required
+                   minlength="8"
+                   maxlength="50">
+
+            <small class="error-message" id="adminPasswordError"></small>
+
+            <button type="submit" class="login-btn">
+                LOGIN
+            </button>
+
+            <div class="form-success" id="adminSuccess"></div>
+
+        </form>
+
+        <button class="back-btn" id="adminBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- STUDENT REGISTRATION -->
+<div id="registerPage" class="page login-page">
+
+    <div class="login-box register-box">
+
+        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
+
+        <h1>ClearSync</h1>
+        <h2>Student Registration</h2>
+
+        <form id="registerForm" novalidate>
+
+            <input type="text"
+                   id="studentName"
+                   placeholder="Student Name"
+                   required
+                   minlength="2"
+                   maxlength="100">
+
+            <small class="error-message" id="studentNameError"></small>
+
+            <input type="text"
+                   id="studentId"
+                   placeholder="Student ID"
+                   required
+                   minlength="3"
+                   maxlength="30">
+
+            <small class="error-message" id="studentIdError"></small>
+
+            <select id="department" required>
+                <option value="........">Select Department / Program</option>
+                <option>College of Information Technology</option>
+                <option>College of Business Administration</option>
+                <option>College of Education</option>
+                <option>College of Nursing</option>
+                <option>College of Arts and Sciences</option>
+            </select>
+
+            <small class="error-message" id="departmentError"></small>
+
+            <input type="text"
+                   id="address"
+                   placeholder="Address"
+                   required
+                   minlength="5"
+                   maxlength="150">
+
+            <small class="error-message" id="addressError"></small>
+
+            <input type="tel"
+                   id="contactNumber"
+                   placeholder="Contact Number (09XXXXXXXXX)"
+                   required
+                   pattern="09[0-9]{9}"
+                   maxlength="11">
+
+            <small class="error-message" id="contactNumberError"></small>
+
+            <input type="email"
+                   id="email"
+                   placeholder="Email"
+                   required
+                   maxlength="100">
+
+            <small class="error-message" id="emailError"></small>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Password"
+                   required
+                   minlength="8"
+                   maxlength="50">
+
+            <small class="error-message" id="passwordError"></small>
+
+            <input type="password"
+                   id="confirmPassword"
+                   placeholder="Confirm Password"
+                   required
+                   minlength="8"
+                   maxlength="50">
+
+            <small class="error-message" id="confirmPasswordError"></small>
+
+            <button type="submit" class="login-btn">
+                REGISTER
+            </button>
+
+            <div class="form-success" id="registerSuccess"></div>
+
+        </form>
+
+        <button class="back-btn" id="registerBack">
+            ← Back to Student Login
+        </button>
+
+    </div>
+
+
+    <!-- TASK 7: STUDENT RECORDS TABLE -->
+
+    <div class="records-box">
+
+        <h2>Student Records</h2>
+
+        <table id="studentTable">
+
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student ID</th>
+                    <th>Department</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
