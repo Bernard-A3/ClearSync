@@ -8,20 +8,20 @@
 </head>
 
 <body>
-
-<!-- HOME PAGE -->
 <div id="homePage" class="page active">
 
     <div class="background"></div>
 
-    <header>
-        <div class="school-logo">
-            <img src="images/Pics2.png" alt="School Logo">
-        </div>
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
 
-        <div class="school-info">
-            <h1>HOLY TRINITY COLLEGE OF GENERAL SANTOS CITY</h1>
-            <p>General Santos City, Philippines</p>
+            <div class="school-info">
+                <h1>HOLY TRINITY COLLEGE OF GENERAL SANTOS CITY</h1>
+                <p>General Santos City, Philippines</p>
+            </div>
         </div>
     </header>
 
@@ -43,54 +43,47 @@
         </div>
 
         <div class="welcome-section">
-
             <h2>Welcome to</h2>
-
             <h1>Clear<span>Sync</span></h1>
-
             <p>A Web-Based Student Clearance Management System</p>
-
         </div>
     </main>
 
 </div>
 
-
-<!-- DEPARTMENT / OFFICE LOGIN -->
+<!-- DEPARTMENT LOGIN -->
 <div id="departmentPage" class="page login-page">
 
     <div class="login-box">
 
-        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
-
         <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
         <h2>Department / Office Login</h2>
 
-        <form id="departmentForm" novalidate>
+        <form id="departmentForm">
+
+            <select id="departmentSelect" required>
+                <option value="">Select Your Department / Office</option>
+                <option value="CETE">CETE</option>
+                <option value="CTE">CTE</option>
+                <option value="CBMA">CBMA</option>
+                <option value="CCJA">CCJA</option>
+            </select>
 
             <input type="text"
                    id="departmentId"
                    placeholder="Department / Office ID"
-                   required
-                   minlength="3"
-                   maxlength="30">
-
-            <small class="error-message" id="departmentIdError"></small>
+                   required>
 
             <input type="password"
                    id="departmentPassword"
+                   autocomplete="current-password"
                    placeholder="Password"
-                   required
-                   minlength="8"
-                   maxlength="50">
+                   required>
 
-            <small class="error-message" id="departmentPasswordError"></small>
-
-            <button type="submit" class="login-btn">
+            <button class="login-btn">
                 LOGIN
             </button>
-
-            <div class="form-success" id="departmentSuccess"></div>
 
         </form>
 
@@ -102,48 +95,37 @@
 
 </div>
 
-
 <!-- STUDENT LOGIN -->
 <div id="studentPage" class="page login-page">
 
     <div class="login-box">
 
-        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
-
         <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
         <h2>Student Login</h2>
 
-        <form id="studentForm" novalidate>
+        <form id="studentForm">
 
             <input type="text"
                    id="studentLoginId"
                    placeholder="Student ID"
-                   required
-                   minlength="3"
-                   maxlength="30">
-
-            <small class="error-message" id="studentLoginIdError"></small>
+                   required>
 
             <input type="password"
                    id="studentLoginPassword"
+                   autocomplete="current-password"
                    placeholder="Password"
-                   required
-                   minlength="8"
-                   maxlength="50">
+                   required>
 
-            <small class="error-message" id="studentLoginPasswordError"></small>
-
-            <button type="submit" class="login-btn">
+            <button class="login-btn">
                 LOGIN
             </button>
-
-            <div class="form-success" id="studentSuccess"></div>
 
         </form>
 
         <div class="register-text">
             Don't have an account?
-            <button type="button" id="registerButton">Register</button>
+            <button id="registerButton">Register</button>
         </div>
 
         <button class="back-btn" id="studentBack">
@@ -154,42 +136,31 @@
 
 </div>
 
-
-<!-- ADMINISTRATOR LOGIN -->
+<!-- ADMIN LOGIN -->
 <div id="adminPage" class="page login-page">
 
     <div class="login-box">
 
-        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
-
         <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
         <h2>Administrator Login</h2>
 
-        <form id="adminForm" novalidate>
+        <form id="adminForm">
 
             <input type="text"
-                   id="adminId"
-                   placeholder="Administrator ID"
-                   required
-                   minlength="3"
-                   maxlength="30">
-
-            <small class="error-message" id="adminIdError"></small>
+                   id="adminEmail"
+                   placeholder="Administrator Email"
+                   required>
 
             <input type="password"
-                   id="adminPassword"
+                   id="adminPasswordInput"
+                   autocomplete="current-password"
                    placeholder="Password"
-                   required
-                   minlength="8"
-                   maxlength="50">
+                   required>
 
-            <small class="error-message" id="adminPasswordError"></small>
-
-            <button type="submit" class="login-btn">
+            <button class="login-btn">
                 LOGIN
             </button>
-
-            <div class="form-success" id="adminSuccess"></div>
 
         </form>
 
@@ -201,97 +172,65 @@
 
 </div>
 
-
 <!-- STUDENT REGISTRATION -->
 <div id="registerPage" class="page login-page">
 
     <div class="login-box register-box">
 
-        <img src="images/Pics2.png" class="login-logo" alt="School Logo">
-
         <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
         <h2>Student Registration</h2>
 
-        <form id="registerForm" novalidate>
+        <form id="registerForm">
 
             <input type="text"
-                   id="studentName"
+                   id="regName"
                    placeholder="Student Name"
-                   required
-                   minlength="2"
-                   maxlength="100">
-
-            <small class="error-message" id="studentNameError"></small>
+                   required>
 
             <input type="text"
-                   id="studentId"
+                   id="regId"
                    placeholder="Student ID"
-                   required
-                   minlength="3"
-                   maxlength="30">
+                   required>
 
-            <small class="error-message" id="studentIdError"></small>
-
-            <select id="department" required>
-                <option value="........">Select Department / Program</option>
-                <option>College of Information Technology</option>
-                <option>College of Business Administration</option>
-                <option>College of Education</option>
-                <option>College of Nursing</option>
-                <option>College of Arts and Sciences</option>
+            <select id="regDepartment" required>
+                <option value="">Select Department / Program</option>
+                <option value="CETE">CETE</option>
+                <option value="CTE">CTE</option>
+                <option value="CBMA">CBMA</option>
+                <option value="CCJA">CCJA</option>
             </select>
 
-            <small class="error-message" id="departmentError"></small>
-
             <input type="text"
-                   id="address"
+                   id="regAddress"
                    placeholder="Address"
-                   required
-                   minlength="5"
-                   maxlength="150">
-
-            <small class="error-message" id="addressError"></small>
+                   required>
 
             <input type="tel"
-                   id="contactNumber"
-                   placeholder="Contact Number (09XXXXXXXXX)"
-                   required
-                   pattern="09[0-9]{9}"
-                   maxlength="11">
-
-            <small class="error-message" id="contactNumberError"></small>
+                   id="regContact"
+                   placeholder="Contact Number"
+                   required>
 
             <input type="email"
-                   id="email"
+                   id="regEmail"
                    placeholder="Email"
-                   required
-                   maxlength="100">
-
-            <small class="error-message" id="emailError"></small>
+                   required>
 
             <input type="password"
                    id="password"
+                   autocomplete="new-password"
                    placeholder="Password"
-                   required
-                   minlength="8"
-                   maxlength="50">
-
-            <small class="error-message" id="passwordError"></small>
+                   required>
 
             <input type="password"
                    id="confirmPassword"
+                   autocomplete="new-password"
                    placeholder="Confirm Password"
-                   required
-                   minlength="8"
-                   maxlength="50">
+                   required>
 
-            <small class="error-message" id="confirmPasswordError"></small>
-
-            <button type="submit" class="login-btn">
+            <button class="login-btn">
                 REGISTER
             </button>
-
-            <div class="form-success" id="registerSuccess"></div>
 
         </form>
 
@@ -301,36 +240,120 @@
 
     </div>
 
+</div>
 
-    <!-- TASK 7: STUDENT RECORDS TABLE -->
+<!-- ADMIN DASHBOARD -->
+<div id="adminDashboardPage" class="page dash-page">
 
-    <div class="records-box">
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p>Administrator Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="adminLogout">Log Out</button>
+    </header>
 
-        <h2>Student Records</h2>
+    <main class="dash-main">
+        <h2>All Registered Students</h2>
+        <p class="dash-subtext">Every student account created through registration appears here automatically.</p>
 
-        <table id="studentTable">
-
-            <thead>
-                <tr>
-                    <th>Student Name</th>
-                    <th>Student ID</th>
-                    <th>Department</th>
-                    <th>Address</th>
-                    <th>Contact Number</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-
-            <tbody id="studentTableBody">
-            </tbody>
-
-        </table>
-
-    </div>
+        <div class="table-wrap">
+            <table id="adminStudentTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Department</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p class="empty-state" id="adminEmptyState">No students have registered yet.</p>
+        </div>
+    </main>
 
 </div>
 
+<!-- DEPARTMENT DASHBOARD -->
+<div id="departmentDashboardPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p id="departmentDashName">Department Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="departmentLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main">
+        <h2>Students in Your Department</h2>
+        <p class="dash-subtext">Only students who registered under this department are listed here.</p>
+
+        <div class="table-wrap">
+            <table id="departmentStudentTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p class="empty-state" id="departmentEmptyState">No students registered under this department yet.</p>
+        </div>
+    </main>
+
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div id="studentDashboardPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p>Student Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="studentLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main student-dash-main">
+
+        <div class="clearance-panel">
+            <h2>Clearance Checklist</h2>
+            <p class="dash-subtext">Approval status from each office. Newly registered students start with everything pending.</p>
+
+            <ul class="clearance-list" id="clearanceList"></ul>
+        </div>
+
+        <aside class="student-info-panel">
+            <h2>My Information</h2>
+            <dl id="studentInfoList" class="info-list"></dl>
+        </aside>
+
+    </main>
+
+</div>
 
 <script src="script.js"></script>
 
