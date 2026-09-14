@@ -1,3 +1,12 @@
+:root {
+    --green-dark: #04452b;
+    --green: #075936;
+    --green-mid: #034b30;
+    --gold: #d8c86b;
+    --text: #26332c;
+    --muted: #8a978f;
+    --shadow: 0 6px 20px rgba(0,0,0,.18);
+}
 * {
     margin: 0;
     padding: 0;
