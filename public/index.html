@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="homePage" class="page active">
+
+    <div class="background"></div>
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+
+            <div class="school-info">
+                <h1>HOLY TRINITY COLLEGE OF GENERAL SANTOS CITY</h1>
+                <p>General Santos City, Philippines</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+
+            <button id="departmentButton">
+                DEPARTMENT / OFFICE <span>›</span>
+            </button>
+
+            <button id="studentButton">
+                STUDENT <span>›</span>
+            </button>
+
+            <button id="adminButton">
+                ADMINISTRATOR <span>›</span>
+            </button>
+
+        </div>
+
+        <div class="welcome-section">
+            <h2>Welcome to</h2>
+            <h1>Clear<span>Sync</span></h1>
+            <p>A Web-Based Student Clearance Management System</p>
+        </div>
+    </main>
+
+</div>
+
+<!-- DEPARTMENT LOGIN -->
+<div id="departmentPage" class="page login-page">
+
+    <div class="login-box">
+
+        <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
+        <h2>Department / Office Login</h2>
+
+        <form id="departmentForm">
+
+            <select id="departmentSelect" required>
+                <option value="">Select Your Department / Office</option>
+                <option value="CETE">CETE</option>
+                <option value="CTE">CTE</option>
+                <option value="CBMA">CBMA</option>
+                <option value="CCJE">CCJE</option>
+            </select>
+
+            <input type="text"
+                   id="departmentId"
+                   placeholder="Department / Office ID"
+                   required>
+
+            <input type="password"
+                   id="departmentPassword"
+                   autocomplete="current-password"
+                   placeholder="Password"
+                   required>
+
+            <button class="login-btn">
+                LOGIN
+            </button>
+
+        </form>
+
+        <button class="back-btn" id="departmentBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+<!-- STUDENT LOGIN -->
+<div id="studentPage" class="page login-page">
+
+    <div class="login-box">
+
+        <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
+        <h2>Student Login</h2>
+
+        <form id="studentForm">
+
+            <input type="text"
+                   id="studentLoginId"
+                   placeholder="Student ID"
+                   required>
+
+            <input type="password"
+                   id="studentLoginPassword"
+                   autocomplete="current-password"
+                   placeholder="Password"
+                   required>
+
+            <button class="login-btn">
+                LOGIN
+            </button>
+
+        </form>
+
+        <div class="register-text">
+            Don't have an account?
+            <button id="registerButton">Register</button>
+        </div>
+
+        <button class="back-btn" id="studentBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="adminPage" class="page login-page">
+
+    <div class="login-box">
+
+        <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
+        <h2>Administrator Login</h2>
+
+        <form id="adminForm">
+
+            <input type="text"
+                   id="adminEmail"
+                   placeholder="Administrator Email"
+                   required>
+
+            <input type="password"
+                   id="adminPasswordInput"
+                   autocomplete="current-password"
+                   placeholder="Password"
+                   required>
+
+            <button class="login-btn">
+                LOGIN
+            </button>
+
+        </form>
+
+        <button class="back-btn" id="adminBack">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+<!-- STUDENT REGISTRATION -->
+<div id="registerPage" class="page login-page">
+
+    <div class="login-box register-box">
+
+        <h1>ClearSync</h1>
+        <img src="images/Pics2.png" class="login-logo">
+        <h2>Student Registration</h2>
+
+        <form id="registerForm" novalidate>
+
+            <p class="section-label">Full Name</p>
+
+            <div class="field-group">
+                <p class="field-warning" id="regFirstNameWarning"></p>
+                <input type="text" id="regFirstName" placeholder="First Name" required>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regMiddleNameWarning"></p>
+                <input type="text" id="regMiddleName" placeholder="Middle Name (optional)">
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regLastNameWarning"></p>
+                <input type="text" id="regLastName" placeholder="Last Name" required>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regIdWarning"></p>
+                <input type="text" id="regId" placeholder="Student ID (numbers only)" inputmode="numeric" required>
+            </div>
+
+            <div class="field-group">
+                <select id="regDepartment" required>
+                    <option value="">Select Department / Program</option>
+                    <option value="CETE">CETE</option>
+                    <option value="CTE">CTE</option>
+                    <option value="CBMA">CBMA</option>
+                    <option value="CCJE">CCJE</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <select id="regYearLevel" required>
+                    <option value="">Select Year Level</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+            </div>
+
+            <p class="section-label">Address</p>
+
+            <div class="field-group">
+                <p class="field-warning" id="regRegionWarning"></p>
+                <select id="regRegion" required>
+                    <option value="">Loading regions…</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regProvinceWarning"></p>
+                <select id="regProvince" required disabled>
+                    <option value="">Select Region First</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regCityWarning"></p>
+                <select id="regCity" required disabled>
+                    <option value="">Select Province First</option>
+                </select>
+                <button type="button" class="link-btn" id="cityManualToggle">Can't find your city/municipality? Type it manually</button>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regBarangayWarning"></p>
+                <select id="regBarangay" required disabled>
+                    <option value="">Select City/Municipality First</option>
+                </select>
+                <button type="button" class="link-btn" id="barangayManualToggle">Can't find your barangay? Type it manually</button>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regZipWarning"></p>
+                <input type="text" id="regZip" placeholder="Zip Code (numbers only)" inputmode="numeric" maxlength="4" required>
+            </div>
+
+            <p class="section-label">Contact</p>
+
+            <div class="field-group">
+                <p class="field-warning" id="regContactWarning"></p>
+                <input type="tel" id="regContact" placeholder="Contact Number (11 digits)" inputmode="numeric" maxlength="11" required>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="regEmailWarning"></p>
+                <div class="email-row">
+                    <input type="email" id="regEmail" placeholder="juandelacruz@online.htcgsc.edu.ph" required>
+                    <button type="button" class="mini-btn" id="emailCheckBtn">Check</button>
+                </div>
+                <div class="verify-box hidden" id="emailVerifyBox">
+                    <p id="emailVerifyMessage"></p>
+                    <button type="button" class="mini-btn confirm-btn" id="emailImMeBtn">It's me, continue</button>
+                </div>
+            </div>
+
+            <p class="section-label">Password</p>
+
+            <div class="field-group">
+                <p class="field-warning" id="passwordWarning"></p>
+                <input type="password"
+                       id="password"
+                       autocomplete="new-password"
+                       placeholder="Password"
+                       required>
+                <p class="field-hint">At least 1 uppercase letter, 1 lowercase letter and 1 number. Special characters are optional.</p>
+            </div>
+
+            <div class="field-group">
+                <p class="field-warning" id="confirmPasswordWarning"></p>
+                <input type="password"
+                       id="confirmPassword"
+                       autocomplete="new-password"
+                       placeholder="Confirm Password"
+                       required>
+            </div>
+
+            <button class="login-btn">
+                REGISTER
+            </button>
+
+        </form>
+
+        <button class="back-btn" id="registerBack">
+            ← Back to Student Login
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="adminDashboardPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p>Administrator Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="adminLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main admin-dash-main">
+
+        <div class="dash-sidebar">
+            <h2>All Registered Students</h2>
+            <p class="dash-subtext">Every student account created through registration appears here automatically.</p>
+        </div>
+
+        <div class="dash-content">
+
+            <div class="stats-row" id="adminStats"></div>
+
+            <div class="toolbar">
+                <div class="toolbar-input search-input">
+                    <span class="toolbar-icon">🔍</span>
+                    <input type="text" id="adminSearch" placeholder="Search by name or student ID…">
+                </div>
+                <div class="toolbar-input toolbar-select-wrap">
+                    <span class="toolbar-icon">🏛</span>
+                    <select id="adminDeptFilter">
+                        <option value="">All Departments</option>
+                        <option value="CETE">CETE</option>
+                        <option value="CTE">CTE</option>
+                        <option value="CBMA">CBMA</option>
+                        <option value="CCJE">CCJE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table id="adminStudentTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Department</th>
+                            <th>Year Level</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Clearance</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <p class="empty-state" id="adminEmptyState">No students have registered yet.</p>
+                <div class="pagination" id="adminPagination"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- DEPARTMENT DASHBOARD -->
+<div id="departmentDashboardPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p id="departmentDashName">Department Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="departmentLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main department-dash-main">
+
+        <div class="dash-sidebar">
+            <h2>Students in Your Department</h2>
+            <p class="dash-subtext">Only students who registered under this department are listed here.</p>
+        </div>
+
+        <div class="dash-content">
+
+            <div class="stats-row" id="departmentStats"></div>
+
+            <div class="toolbar">
+                <div class="toolbar-input search-input">
+                    <span class="toolbar-icon">🔍</span>
+                    <input type="text" id="departmentSearch" placeholder="Search by name or student ID…">
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table id="departmentStudentTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Year Level</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Clearance</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <p class="empty-state" id="departmentEmptyState">No students registered under this department yet.</p>
+                <div class="pagination" id="departmentPagination"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div id="studentDashboardPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p>Student Dashboard</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="studentLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main student-dash-main">
+
+        <div class="clearance-panel">
+            <h2>Clearance Checklist</h2>
+            <p class="dash-subtext">Approval status from each office. Newly registered students start with everything pending.</p>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="clearanceProgressFill"></div>
+            </div>
+            <p class="progress-label" id="clearanceProgressLabel"></p>
+
+            <ul class="clearance-list" id="clearanceList"></ul>
+        </div>
+
+        <button type="button" class="my-info-btn" id="myInfoButton">
+            <span class="my-info-icon">👤</span> My Info
+        </button>
+
+    </main>
+
+</div>
+
+<!-- STUDENT MY INFO -->
+<div id="studentInfoPage" class="page dash-page">
+
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <div class="logo-badge sm">
+                <img src="images/Pics2.png" alt="School Logo">
+            </div>
+            <div>
+                <h1>ClearSync</h1>
+                <p>My Information</p>
+            </div>
+        </div>
+        <button class="logout-btn" id="studentInfoLogout">Log Out</button>
+    </header>
+
+    <main class="dash-main">
+        <div class="student-info-panel standalone-info-panel">
+            <h2>My Information</h2>
+            <p class="dash-subtext">Your registered personal and contact details.</p>
+            <dl id="studentInfoList" class="info-list"></dl>
+            <button type="button" class="back-btn" id="studentInfoBack">← Back to Dashboard</button>
+        </div>
+    </main>
+
+</div>
+
+<!-- SHARED DETAIL MODAL (admin / department "View") -->
+<div id="detailModal" class="modal-overlay hidden">
+    <div class="modal-box">
+        <button type="button" class="modal-close" id="detailModalClose">×</button>
+        <h2>Student Information</h2>
+        <dl id="modalInfoList" class="info-list"></dl>
+
+        <h3>Clearance Status</h3>
+        <ul class="clearance-list" id="modalClearanceList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

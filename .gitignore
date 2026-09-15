@@ -1,0 +1,12 @@
+# Dependencies — never commit these, they're huge and machine-specific.
+# Anyone who clones the repo runs "npm install" to regenerate this folder.
+node_modules/
+
+# Environment variables — contains your real database password.
+# Never push this to GitHub, especially a public repo.
+.env
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
